@@ -16,8 +16,8 @@ class CnVirtMsg:
             }
             url = urljoin(sms_base_url, "?" + urlencode(params))
             response = requests.get(url=url, timeout=10)
-            data = response.json()
-            return data["data"]
+            data = response.content
+            return data
         except Exception as e:
             print(e)
 
@@ -31,7 +31,7 @@ class CnVirtMsg:
             }
             url = urljoin(sms_base_url, "?" + urlencode(params))
             response = requests.get(url=url, timeout=10)
-            data = response.json()
-            return data["data"]
+            data = response.content
+            return data
         except Exception as e:
             print(e)
