@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='rdpywheel',
-    version='0.1.8',
+    version='0.1.10',
     keywords='wheel',
     description='a library for Python wheel',
     license='MIT License',

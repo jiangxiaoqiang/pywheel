@@ -2,9 +2,6 @@ import os
 from urllib.parse import urljoin, urlencode
 import requests
 
-sms_token = os.environ.get("CN_VIRTUAL_TOKEN")
-sms_base_url = os.environ.get("CN_VIRTUAL_BASE_URL")
-
 
 class CnVirtMsg:
     def get_sms_phone_number(token: str):
@@ -14,6 +11,7 @@ class CnVirtMsg:
                 "token": token,
                 "cardType": "实卡"
             }
+            sms_base_url = os.environ.get("CN_VIRTUAL_BASE_URL")
             url = urljoin(sms_base_url, "?" + urlencode(params))
             response = requests.get(url=url, timeout=10)
             data = response.content
@@ -30,6 +28,7 @@ class CnVirtMsg:
                 "phone": phone_no,
                 "keyWord": key_word
             }
+            sms_base_url = os.environ.get("CN_VIRTUAL_BASE_URL")
             url = urljoin(sms_base_url, "?" + urlencode(params))
             response = requests.get(url=url, timeout=10)
             data = response.content
@@ -45,6 +44,7 @@ class CnVirtMsg:
                 "token": token,
                 "phone": phone_no,
             }
+            sms_base_url = os.environ.get("CN_VIRTUAL_BASE_URL")
             url = urljoin(sms_base_url, "?" + urlencode(params))
             response = requests.get(url=url, timeout=10)
             data = response.content
@@ -52,3 +52,4 @@ class CnVirtMsg:
             return string_data
         except Exception as e:
             print(e)
+
