@@ -9,7 +9,7 @@ from rdpywheel.sms.visa_test import VisaTest
 
 class SMSUtil:
 
-    def get_vfs_code(self, phone_no: str, token: str):
+    def get_platform_vfs_code(self, phone_no: str, token: str):
         is_test = os.environ.get("SMS_TEST_ENABLE")
         if is_test:
             return SMSUtil.query_test_vfs_code(phone_no)
