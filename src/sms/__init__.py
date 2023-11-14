@@ -1,1 +1,0 @@
-from src.sms.cn_virt_msg import CnVirtMsg
