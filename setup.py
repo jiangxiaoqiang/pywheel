@@ -1,11 +1,16 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 setup(
     name='rdpywheel',
-    version='0.1.2',
-    description='My library for common code',
-    author='jiangtingqiang',
-    url='https://github.com/jiangxiaoqiang/rdpywheel.git',
+    version='0.1.13',
+    keywords='wheel',
+    description='a library for Python wheel',
+    license='MIT License',
+    url='https://github.com/jiangxiaoqiang/rdpywheel',
+    author='jiangxiaoqiang',
     author_email='jiangtingqiang@gmail.com',
-    packages=['rdpywheel'],
+    packages=find_packages(),
+    include_package_data=True,
+    platforms='any',
+    install_requires=[],
 )
