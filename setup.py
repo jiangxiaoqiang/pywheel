@@ -1,8 +1,8 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='rdpywheel',
-    version='0.1.13',
+    name='src',
+    version='0.1.14',
     keywords='wheel',
     description='a library for Python wheel',
     license='MIT License',

@@ -3,8 +3,8 @@ from urllib.parse import urljoin, urlencode
 import requests
 from time import sleep
 
-from rdpywheel.sms import CnVirtMsg
-from rdpywheel.sms.visa_test import VisaTest
+from src.sms import CnVirtMsg
+from src.sms.visa_test import VisaTest
 
 
 class SMSUtil:
