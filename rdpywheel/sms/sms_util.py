@@ -2,8 +2,7 @@ import os
 from urllib.parse import urljoin, urlencode
 import requests
 from time import sleep
-
-from rdpywheel.sms import CnVirtMsg
+from rdpywheel.sms.cn_virt_msg import CnVirtMsg
 from rdpywheel.sms.visa_test import VisaTest
 
 

@@ -1,0 +1,7 @@
+[pypi]
+verify_ssl = false
+
+[[tool.pdm.source]]
+url = "http://admin:${NAS_NEXUS_PWD}@192.168.50.90:8092/repository/group-pypi/simple"
+verify_ssl = true
+name = "pypi"
