@@ -1,7 +1,16 @@
 [pypi]
 verify_ssl = false
 
+# https://github.com/pdm-project/pdm/discussions/2406
+[tool.pdm.resolution]
+respect-source-order = true
+
 [[tool.pdm.source]]
-url = "http://admin:${NAS_NEXUS_PWD}@192.168.50.90:8092/repository/group-pypi/simple"
-verify_ssl = true
 name = "pypi"
+url = "http://admin:fac31388-163a-4843-9f2f-837689809ec3@192.168.50.90:8092/repository/group-pypi/simple"
+verify_ssl = false
+
+[[tool.pdm.source]]
+name = "fallback"
+url = "http://pypi.org/simple"
+verify_ssl = false
