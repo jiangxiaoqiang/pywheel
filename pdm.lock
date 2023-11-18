@@ -5,7 +5,7 @@
 groups = ["default"]
 strategy = ["cross_platform"]
 lock_version = "4.4"
-content_hash = "sha256:c98d07526eae6d0fb4cdda70bb4fe9448824577500e1daf86e7baa88a9846528"
+content_hash = "sha256:14912b713d5746a6d31b2ea296d5164f5d11cc8aea2e2027ae05cd2974ef9920"
 
 [[package]]
 name = "certifi"
@@ -148,23 +148,6 @@ files = [
     {file = "cryptography-41.0.5-pp39-pypy39_pp73-manylinux_2_28_x86_64.whl", hash = "sha256:fba1e91467c65fe64a82c689dc6cf58151158993b13eb7a7f3f4b7f395636723"},
     {file = "cryptography-41.0.5-pp39-pypy39_pp73-win_amd64.whl", hash = "sha256:0d2a6a598847c46e3e321a7aef8af1436f11c27f1254933746304ff014664d84"},
     {file = "cryptography-41.0.5.tar.gz", hash = "sha256:392cb88b597247177172e02da6b7a63deeff1937fa6fec3bbf902ebd75d97ec7"},
-]
-
-[[package]]
-name = "curl-cffi"
-version = "0.5.9"
-requires_python = ">=3.7"
-summary = "libcurl ffi bindings for Python, with impersonation support"
-dependencies = [
-    "cffi>=1.12.0",
-]
-files = [
-    {file = "curl_cffi-0.5.9-cp37-abi3-macosx_10_9_x86_64.whl", hash = "sha256:f94a02d6a2e00ffd1044ac0727285e5e12f69bef97324640f7fc0bffc2fd7aa9"},
-    {file = "curl_cffi-0.5.9-cp37-abi3-macosx_11_0_arm64.whl", hash = "sha256:3c10f8fa27b8dda733534a3baae307db8fd6344cb5166b6dfe359eb62e0b73c6"},
-    {file = "curl_cffi-0.5.9-cp37-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:13b218d8e195c0337e6ee7f700c7074efa61bdfeca32276cc159b9a4369280fb"},
-    {file = "curl_cffi-0.5.9-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:035387477b9c6a0861c1479b077422aeb68ac827f273f05c69cdaa91faad947e"},
-    {file = "curl_cffi-0.5.9-cp37-abi3-win_amd64.whl", hash = "sha256:19e43c507b61f368554ece6801bdb4bb1505e35cb1110fcd2c273f8f4e319637"},
-    {file = "curl_cffi-0.5.9.tar.gz", hash = "sha256:996aa7afd0610d459c23a0529709213319b18ae44df910a010aa56673f103a25"},
 ]
 
 [[package]]

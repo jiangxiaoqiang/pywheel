@@ -134,3 +134,5 @@ dist
 build
 .DS_Store
 .pdm-build
+rdpywheel.egg-info
+.pdm-python
