@@ -1,7 +1,10 @@
+import distutils
 import os
 from urllib.parse import urljoin, urlencode
 import requests
 from time import sleep
+
+from rdpywheel.model.global_info import sys_logger
 from rdpywheel.sms.cn_virt_msg import CnVirtMsg
 from rdpywheel.sms.visa_test import VisaTest
 
@@ -9,8 +12,10 @@ from rdpywheel.sms.visa_test import VisaTest
 class SMSUtil:
 
     def get_platform_vfs_code(self, phone_no: str, token: str):
-        is_test = os.environ.get("SMS_TEST_ENABLE")
-        if is_test:
+        is_test_str = os.environ.get("SMS_TEST_ENABLE")
+        # https://stackoverflow.com/questions/715417/converting-from-a-string-to-boolean-in-python
+        is_test_str_bool = bool(distutils.util.strtobool(is_test_str))
+        if is_test_str_bool:
             return SMSUtil.query_test_vfs_code(phone_no)
         else:
             return SMSUtil.query_vfs_code(phone_no, token)
@@ -80,7 +85,7 @@ class SMSUtil:
                 return result["text"]
             return None
         except Exception as e:
-            print(e)
+            sys_logger.error("get test sms message error", e)
 
     if __name__ == '__main__':
         get_test_sms_msg(str(15683761628))

@@ -1,6 +1,6 @@
 [project]
 name = "rdpywheel"
-version = "0.1.29"
+version = "0.1.32"
 description = "reddwarf public python lib"
 authors = [
     {name = "jiang qiang", email = "jiangtingqiang@gmail.com"},
