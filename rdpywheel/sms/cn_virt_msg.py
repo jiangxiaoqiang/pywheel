@@ -1,6 +1,7 @@
 import os
 from urllib.parse import urljoin, urlencode
 import requests
+from rdpywheel.model.global_info import sys_logger
 
 
 class CnVirtMsg:
@@ -18,7 +19,7 @@ class CnVirtMsg:
             string_data = data.decode('utf-8')
             return string_data
         except Exception as e:
-            print(e)
+            sys_logger.error("get sms phone facing error", e)
 
     def get_sms_msg(token: str, phone_no: str, key_word: str):
         try:
@@ -35,7 +36,7 @@ class CnVirtMsg:
             string_data = data.decode('utf-8')
             return string_data
         except Exception as e:
-            print(e)
+            sys_logger.error("get sms message error", e)
 
     def block_phone(token: str, phone_no: str):
         try:
@@ -51,5 +52,4 @@ class CnVirtMsg:
             string_data = data.decode('utf-8')
             return string_data
         except Exception as e:
-            print(e)
-
+            sys_logger.error("get block phone error", e)
