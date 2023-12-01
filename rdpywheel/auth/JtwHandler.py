@@ -18,3 +18,14 @@ class JwtHandler:
             return True
         else:
             return False
+
+    @staticmethod
+    def get_toke_expire(access_token):
+        parsed_token = jwt.decode(access_token,
+                                  verify=False,
+                                  algorithms=['HS512'],
+                                  options={
+                                      'verify_signature': False
+                                  })
+        exp = parsed_token["exp"]
+        return exp
